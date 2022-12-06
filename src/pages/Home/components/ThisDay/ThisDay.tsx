@@ -15,7 +15,7 @@ export const ThisDay = ({ weather }: Props) => {
       <div className={s.top__block}>
         <div className={s.top__block_wrapper}>
           <div className={s.this__temp}>
-            {weather.main.temp ? Math.ceil(weather.main.temp) : "5"}°
+            {weather.main.temp !== 0 ? Math.ceil(weather.main.temp) : "5"}°
           </div>
           <div className={s.this__day_name}>Сегодня</div>
         </div>
