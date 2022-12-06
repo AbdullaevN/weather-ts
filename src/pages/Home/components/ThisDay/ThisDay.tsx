@@ -8,11 +8,15 @@ interface Props {
 }
 
 export const ThisDay = ({ weather }: Props) => {
+  console.log(weather);
+
   return (
     <div className={s.this__day}>
       <div className={s.top__block}>
         <div className={s.top__block_wrapper}>
-          <div className={s.this__temp}>{Math.ceil(weather.main.temp)}°</div>
+          <div className={s.this__temp}>
+            {weather.main.temp ? Math.ceil(weather.main.temp) : "5"}°
+          </div>
           <div className={s.this__day_name}>Сегодня</div>
         </div>
         <GlobalSvgSelector id="sun" />
